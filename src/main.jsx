@@ -12,11 +12,18 @@ import About from './Component/About/About.jsx';
 import Contact from './Component/Contact/Contact.jsx';
 import Users from './Component/Users/Users.jsx';
 import UserDetails from './Component/UserDetails/UserDetails.jsx';
+import ErrorPage from './Component/ErrorPage/ErrorPage.jsx';
+
+
+
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/about",
@@ -43,6 +50,9 @@ const router = createBrowserRouter([
   },
 
 
+
+
+
   //  path: "contacts/:contactId",-----> indicates that we use any value instead of  contactId after contacts
 
   // {
@@ -53,6 +63,10 @@ const router = createBrowserRouter([
   //   path: "/contact",
   //   element:<div>lets contact us!</div>,
   // },
+
+
+
+  
 ]);
 
 createRoot(document.getElementById('root')).render(
